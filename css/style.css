@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.sky {
+    width: 1000px;
+    height: 500px;
+    background-image: url(../assets/sky.webp);
+    background-repeat: no-repeat;
+    animation-name: sky;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes sky {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
+.terrain {
+    width: 100%;
+    height: 150px;
+    background-image: url(../assets/terrain.webp);
+    position: absolute;
+    bottom: 0px;
+    animation-name: terrain;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes terrain {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 100%;
+    }
+}
+
+#hero {
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    bottom: 70px;
+    z-index: 100;
+}
+
+.jump {
+    position: absolute;
+    animation-name: jump;
+    animation-duration: .5s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0px;
+    }
+
+    50% {
+        bottom: 100px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+.mushroom {
+    width: 112px;
+    height: 102px;
+    position: absolute;
+    bottom: 78px;
+    /* left: 90px; */
+    z-index: 100;
+    animation-name: mushroom;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mushroom {
+    0% {
+        left: 1000px;
+    }
+
+    100% {
+        left: -112px;
+    }
+}
